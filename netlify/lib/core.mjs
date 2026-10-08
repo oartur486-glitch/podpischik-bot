@@ -69,6 +69,7 @@ const ymd = (y, m, d) => `${y}-${String(m).padStart(2, '0')}-${String(d).padStar
 const mk = (y, m, d) => (m >= 1 && m <= 12 && d >= 1 && d <= dim(y, m) ? ymd(y, m, d) : null);
 
 export const diffDays = (a, b) => Math.round((D(b) - D(a)) / 864e5); // b − a
+export const addDays = (date, n) => S(D(date) + n * 864e5);
 
 export function addPeriod(date, period, anchor) {
   if (period === 'week') return S(D(date) + 7 * 864e5);
