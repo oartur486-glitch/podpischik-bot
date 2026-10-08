@@ -1,0 +1,6 @@
+# Бот целиком живёт в функциях; publish нужен только для заглушки-страницы.
+[build]
+  publish = "public"
+
+[functions]
+  node_bundler = "esbuild"
